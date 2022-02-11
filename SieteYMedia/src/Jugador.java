@@ -49,13 +49,6 @@ public class Jugador {
         this.puntuacion += puntuacion;
     }
 
-    public void cogerCarta(Baraja baraja){
-        Carta cartaRobada = baraja.getCartas()[0];
-        double puntos = cartaRobada.getValor();
-        puntuacion += puntos;
-        baraja.moverPrimeraCarta(baraja);
-    }
-
     @Override
     public String toString() {
         // TODO Auto-generated method stub

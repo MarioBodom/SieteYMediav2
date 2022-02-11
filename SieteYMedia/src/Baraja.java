@@ -95,12 +95,15 @@ public class Baraja {
         }
     }
     public void robarCarta(Jugador jugador){
-        Carta aux = this.cartas[this.posSiguienteCarta];
+        String nombre = cartas[posSiguienteCarta].getNombre();
+        double valor = cartas[posSiguienteCarta].getValor();
+        int palo = cartas[posSiguienteCarta].getPalo();
+        Carta aux = new Carta(nombre, palo, valor);
         jugador.setPlaying(true);
         jugador.setMano(aux);
         System.out.println(jugador.getNombre()+" has robado un "+aux.toString());
         jugador.setPuntuacion(aux.getValor());
-        posSiguienteCarta++;
+        this.posSiguienteCarta++;
     }
     // public void cogerCarta(Baraja baraja){
     //     Carta cartaRobada = baraja.getCartas()[];

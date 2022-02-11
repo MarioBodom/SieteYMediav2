@@ -15,9 +15,16 @@ public class TestsJuego extends SieteYMedia {
         System.out.println(player1.toString());
         player1.mostrarJugador(player1);
         baraja.robarCarta(player1);
+        System.out.println(player1.getMano());
         baraja.robarCarta(player1);
+        System.out.println(player1.getMano());
         baraja.robarCarta(player1);
-        baraja.robarCarta(player1);
+        player1.getMano().get(1).setValor(50);
+        System.out.println(player1.getMano().get(1).getValor());
+        System.out.println(player1.getMano());
+        for (int i = 0; i < baraja.getCartas().length; i++) {
+            System.out.println(baraja.getCartas()[i].toString() + " valor: " + baraja.getCartas()[i].getValor());
+        }
         player1.mostrarJugador(player1);
         // Jugador m = nuevoJugador();
         // System.out.println(m.getPuntuacion());

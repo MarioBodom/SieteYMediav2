@@ -12,10 +12,10 @@ public class Carta {
     private String nombre;
 
     // Constructor
-    public Carta(String nombre, int suit, double rank){
+    public Carta(String nombre, int palo, double valor){
         this.nombre = nombre;
-        this.palo = suit;
-        this.valor = rank;
+        this.palo = palo;
+        this.valor = valor;
     }
     
     // Metodos
@@ -29,6 +29,10 @@ public class Carta {
 
     public String getNombre() {
         return nombre;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
     }
 
     public String getSuitString(){

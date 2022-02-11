@@ -16,7 +16,7 @@ public class SieteYMedia {
 
             // mostrarJugadores(jugadores);
 
-            jugada(jugadores, coinToss(), baraja);
+            // jugada(jugadores, coinToss(), baraja);
 
             mostrarJugadores(jugadores);
             
@@ -48,55 +48,64 @@ public class SieteYMedia {
         return (int) Math.round(Math.random());
     }
 
-    public static void jugada(Jugador[] jugadores, int coinToss, Baraja baraja) {
-        // int turnos;
-        Scanner sc = new Scanner(System.in);
-        mostrarJugadores(jugadores);
-        if (coinToss == 0) {
-            jugadores[0].cogerCarta(baraja);
-            System.out.println(jugadores[0].getNombre() + " Tu puntuación es: " + jugadores[0].getPuntuacion());
-            System.out.println("Quieres robar o plantarte?");
-            String eleccion = sc.nextLine().toLowerCase();
-            while (eleccion.equals("robar")) {
-                jugadores[0].cogerCarta(baraja);
-                System.out.println(jugadores[0].getNombre() + " Tu puntuación es: " + jugadores[0].getPuntuacion());
-                System.out.println("Quieres robar o plantarte?");
-                eleccion = sc.nextLine().toLowerCase();
-            }
-            jugadores[1].cogerCarta(baraja);
-            System.out.println(jugadores[1].getNombre() + " Tu puntuación es: " + jugadores[1].getPuntuacion());
-            System.out.println("Quieres robar o plantarte?");
-            eleccion = sc.nextLine().toLowerCase();
-            while (eleccion.equals("robar")) {
-                jugadores[1].cogerCarta(baraja);
-                System.out.println(jugadores[1].getNombre() + " Tu puntuación es: " + jugadores[1].getPuntuacion());
-                System.out.println("Quieres robar o plantarte?");
-                eleccion = sc.nextLine().toLowerCase();
-            }
-            mostrarJugadores(jugadores);
-        } else {
-            jugadores[1].cogerCarta(baraja);
-            System.out.println(jugadores[1].getNombre() + " Tu puntuación es: " + jugadores[1].getPuntuacion());
-            System.out.println("Quieres robar o plantarte?");
-            String eleccion = sc.nextLine().toLowerCase();
-            while (eleccion.equals("robar")) {
-                jugadores[1].cogerCarta(baraja);
-                System.out.println(jugadores[1].getNombre() + " Tu puntuación es: " + jugadores[1].getPuntuacion());
-                System.out.println("Quieres robar o plantarte?");
-                eleccion = sc.nextLine().toLowerCase();
-            }
-
-            jugadores[0].cogerCarta(baraja);
-            System.out.println(jugadores[0].getNombre() + " Tu puntuación es: " + jugadores[0].getPuntuacion());
-            System.out.println("Quieres robar o plantarte?");
-            eleccion = sc.nextLine().toLowerCase();
-            while (eleccion.equals("robar")) {
-                jugadores[0].cogerCarta(baraja);
-                System.out.println(jugadores[0].getNombre() + " Tu puntuación es: " + jugadores[0].getPuntuacion());
-                System.out.println("Quieres robar o plantarte?");
-                eleccion = sc.nextLine().toLowerCase();
-            }
-        }
-        sc.close();
+    public static void jugada(Jugador[] jugadores, Baraja baraja ) {
+        
     }
+
+    // public static void jugada(Jugador[] jugadores, int coinToss, Baraja baraja) {
+    //     // int turnos;
+    //     Scanner sc = new Scanner(System.in);
+    //     mostrarJugadores(jugadores);
+    //     if (coinToss == 0) {
+    //         jugadores[0].cogerCarta(baraja);
+    //         System.out.println(jugadores[0].getNombre() + " Tu puntuación es: " + jugadores[0].getPuntuacion());
+    //         System.out.println("Quieres robar o plantarte?");
+    //         String eleccion = sc.nextLine().toLowerCase();
+    //         while (eleccion.equals("robar")) {
+    //             jugadores[0].cogerCarta(baraja);
+    //             System.out.println(jugadores[0].getNombre() + " Tu puntuación es: " + jugadores[0].getPuntuacion());
+    //             System.out.println("Quieres robar o plantarte?");
+    //             eleccion = sc.nextLine().toLowerCase();
+    //         }
+    //         jugadores[1].cogerCarta(baraja);
+    //         System.out.println(jugadores[1].getNombre() + " Tu puntuación es: " + jugadores[1].getPuntuacion());
+    //         System.out.println("Quieres robar o plantarte?");
+    //         eleccion = sc.nextLine().toLowerCase();
+    //         while (eleccion.equals("robar")) {
+    //             jugadores[1].cogerCarta(baraja);
+    //             System.out.println(jugadores[1].getNombre() + " Tu puntuación es: " + jugadores[1].getPuntuacion());
+    //             System.out.println("Quieres robar o plantarte?");
+    //             eleccion = sc.nextLine().toLowerCase();
+    //         }
+    //         mostrarJugadores(jugadores);
+    //     } else {
+    //         jugadores[1].cogerCarta(baraja);
+    //         System.out.println(jugadores[1].getNombre() + " Tu puntuación es: " + jugadores[1].getPuntuacion());
+    //         System.out.println("Quieres robar o plantarte?");
+    //         String eleccion = sc.nextLine().toLowerCase();
+    //         while (eleccion.equals("robar")) {
+    //             jugadores[1].cogerCarta(baraja);
+    //             System.out.println(jugadores[1].getNombre() + " Tu puntuación es: " + jugadores[1].getPuntuacion());
+    //             System.out.println("Quieres robar o plantarte?");
+    //             eleccion = sc.nextLine().toLowerCase();
+    //         }
+
+    //         jugadores[0].cogerCarta(baraja);
+    //         System.out.println(jugadores[0].getNombre() + " Tu puntuación es: " + jugadores[0].getPuntuacion());
+    //         System.out.println("Quieres robar o plantarte?");
+    //         eleccion = sc.nextLine().toLowerCase();
+    //         while (eleccion.equals("robar")) {
+    //             jugadores[0].cogerCarta(baraja);
+    //             System.out.println(jugadores[0].getNombre() + " Tu puntuación es: " + jugadores[0].getPuntuacion());
+    //             System.out.println("Quieres robar o plantarte?");
+    //             eleccion = sc.nextLine().toLowerCase();
+    //         }
+    //     }
+    //     sc.close();
+    // }
+
+
+
+
 }
+
