@@ -21,42 +21,52 @@ public class Baraja {
                 switch (j) {
                     case 0:
                         cartas[posCarta] = new Carta("As", i, j + 1);
+                        cartas[posCarta].setNumCarta(posCarta+1);
                         posCarta += 1;
                         break;
                     case 1:
                         cartas[posCarta] = new Carta("Dos", i, j + 1);
+                        cartas[posCarta].setNumCarta(posCarta+1);
                         posCarta += 1;
                         break;
                     case 2:
                         cartas[posCarta] = new Carta("Tres", i, j + 1);
+                        cartas[posCarta].setNumCarta(posCarta+1);
                         posCarta += 1;
                         break;
                     case 3:
                         cartas[posCarta] = new Carta("Cuatro", i, j + 1);
+                        cartas[posCarta].setNumCarta(posCarta+1);
                         posCarta += 1;
                         break;
                     case 4:
                         cartas[posCarta] = new Carta("Cinco", i, j + 1);
+                        cartas[posCarta].setNumCarta(posCarta+1);
                         posCarta += 1;
                         break;
                     case 5:
                         cartas[posCarta] = new Carta("Seis", i, j + 1);
+                        cartas[posCarta].setNumCarta(posCarta+1);
                         posCarta += 1;
                         break;
                     case 6:
                         cartas[posCarta] = new Carta("Siete", i, j + 1);
+                        cartas[posCarta].setNumCarta(posCarta+1);
                         posCarta += 1;
                         break;
                     case 7:
                         cartas[posCarta] = new Carta("Sota", i, 0.5);
+                        cartas[posCarta].setNumCarta(posCarta+1);
                         posCarta += 1;
                         break;
                     case 8:
                         cartas[posCarta] = new Carta("Caballo", i, 0.5);
+                        cartas[posCarta].setNumCarta(posCarta+1);
                         posCarta += 1;
                         break;
                     case 9:
                         cartas[posCarta] = new Carta("Rey", i, 0.5);
+                        cartas[posCarta].setNumCarta(posCarta+1);
                         posCarta += 1;
                         break;
 
@@ -71,18 +81,29 @@ public class Baraja {
         return cartas;
     }
 
-    public void barajar(Baraja baraja) {
+    public void barajar() {
         Random r = new Random();
-        for (int i = 0; i < baraja.getCartas().length; i++) {
-            int j = r.nextInt(baraja.getCartas().length);
+        for (int i = 0; i < cartas.length; i++) {
+            int j = r.nextInt(cartas.length);
             if (j != i) {
-                Carta temp = baraja.getCartas()[i];
-                baraja.getCartas()[i] = baraja.getCartas()[j];
-                baraja.getCartas()[j] = temp;                
+                Carta temp = cartas[i];
+                cartas[i] = cartas[j];
+                cartas[j] = temp;                
             }
         }
     }
-
+    
+    public void ordenar(){
+        for (int i = 1; i < cartas.length; i++) {
+            int j = i-1;
+            Carta temp = cartas[i];
+            while (j >= 0 && temp.getNumCarta() < cartas[j].getNumCarta()) {
+                cartas[j+1] = cartas[j];
+                j = j-1;
+            }
+            cartas[j+1] = temp;
+        }
+    }
     public void inicioBaraja(){
         this.posSiguienteCarta++;
     }
@@ -95,10 +116,7 @@ public class Baraja {
         }
     }
     public void robarCarta(Jugador jugador){
-        String nombre = cartas[posSiguienteCarta].getNombre();
-        double valor = cartas[posSiguienteCarta].getValor();
-        int palo = cartas[posSiguienteCarta].getPalo();
-        Carta aux = new Carta(nombre, palo, valor);
+        Carta aux = cartas[posSiguienteCarta];
         jugador.setPlaying(true);
         jugador.setMano(aux);
         System.out.println(jugador.getNombre()+" has robado un "+aux.toString());

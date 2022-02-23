@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Jugador {
     private String nombre;
@@ -54,7 +55,22 @@ public class Jugador {
         // TODO Auto-generated method stub
         return "Jugador: "+ this.nombre + " de edad: "+ this.edad+ " tiene una puntuación de: "+this.puntuacion;
     }
-    public void mostrarJugador(Jugador jugador){
-        System.out.println(jugador.toString());
+    public void mostrarJugador(){
+        System.out.println(toString());
+    }
+
+    public void robarCarta(Baraja baraja){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Que carta quieres robar?");
+        String nombreCarta = sc.nextLine().toLowerCase();
+        Carta cartaRobada;
+        for (int i = 0; i < baraja.getCartas().length; i++) {
+            if (nombreCarta.equals(baraja.getCartas()[i].toString().toLowerCase())) {
+                cartaRobada = baraja.getCartas()[i];
+                setMano(cartaRobada);
+                setPuntuacion(cartaRobada.getValor());
+            }
+        }
+        sc.close();
     }
 }

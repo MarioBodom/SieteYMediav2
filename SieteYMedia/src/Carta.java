@@ -10,12 +10,14 @@ public class Carta {
     private int palo;
     private double valor;
     private String nombre;
+    private int numCarta;
 
     // Constructor
     public Carta(String nombre, int palo, double valor){
         this.nombre = nombre;
         this.palo = palo;
         this.valor = valor;
+        
     }
     
     // Metodos
@@ -29,10 +31,6 @@ public class Carta {
 
     public String getNombre() {
         return nombre;
-    }
-
-    public void setValor(double valor) {
-        this.valor = valor;
     }
 
     public String getSuitString(){
@@ -56,4 +54,10 @@ public class Carta {
         return getNombre() + " de " + getSuitString();
     }
     
+    public int getNumCarta() {
+        return numCarta;
+    }
+    public void setNumCarta(int numCarta) {
+        this.numCarta = numCarta;
+    }
 }

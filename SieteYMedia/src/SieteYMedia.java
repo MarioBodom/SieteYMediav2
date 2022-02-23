@@ -4,13 +4,14 @@ public class SieteYMedia {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Baraja baraja = new Baraja();
-        baraja.barajar(baraja);
-        Jugador[] jugadores = new Jugador[2];
+        baraja.barajar();
+        System.out.println("¿Cuántos jugadores sois?");
+        Jugador[] jugadores = new Jugador[sc.nextInt()];
         boolean juego = true;
 
         while (juego) {
-            System.out.println("Dame los nombres de los dos jugadores");
-            for (int i = 0; i < 2; i++) {
+            System.out.println("Dame los nombres de los jugadores");
+            for (int i = 0; i < jugadores.length; i++) {
                 jugadores[i] = nuevoJugador();
             }
 
@@ -53,7 +54,6 @@ public class SieteYMedia {
     }
 
     // public static void jugada(Jugador[] jugadores, int coinToss, Baraja baraja) {
-    //     // int turnos;
     //     Scanner sc = new Scanner(System.in);
     //     mostrarJugadores(jugadores);
     //     if (coinToss == 0) {
