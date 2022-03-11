@@ -32,16 +32,16 @@ public class SieteYMedia {
         final String ASK_PLAYER_NAME = "Dame tu nombre y edad:";
         System.out.println(ASK_PLAYER_NAME);
         Jugador player = new Jugador(sc.nextLine(), sc.nextInt());
+        if (player.getPartidasJugadas() == 0) {
+            player.setMonedero(100);
+        }
         sc.reset();
         return player;
     }
 
     public static void mostrarJugadores(Jugador[] jugadores) {
-        String player;
         for (int i = 0; i < jugadores.length; i++) {
-            player = "Jugador " + (i + 1) + ": " + jugadores[i].getNombre() + " puntuación: "
-                    + jugadores[i].getPuntuacion();
-            System.out.println(player);
+            jugadores[i].mostrarJugador();
         }
     }
 

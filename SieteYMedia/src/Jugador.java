@@ -7,6 +7,9 @@ public class Jugador {
     private int edad;
     private ArrayList <Carta> mano;
     private boolean isPlaying;
+    private double monedero;
+    private boolean esAmigo;
+    private int partidasJugadas;
 
     
 
@@ -16,6 +19,13 @@ public class Jugador {
         this.puntuacion = 0;
         this.mano = new ArrayList<Carta>();
         this.isPlaying = false;
+        if (nombre.toLowerCase().equals("mrbodom")) {
+            this.esAmigo = true;
+        } else {
+            this.esAmigo = false;
+        }
+        this.monedero = 0;
+        this.partidasJugadas = 0;
     }
     
     // Metodos
@@ -50,10 +60,35 @@ public class Jugador {
         this.puntuacion += puntuacion;
     }
 
+    public double getMonedero() {
+        return monedero;
+    }
+
+    public void setMonedero(double monedero) {
+        this.monedero = monedero;
+    }
+
+    public int getPartidasJugadas() {
+        return partidasJugadas;
+    }
+
+    public void setPartidasJugadas(int partidasJugadas) {
+        this.partidasJugadas = partidasJugadas;
+    }
+
+    public boolean getEsAmigo(){
+        return esAmigo;
+    }
+    public void setEsAmigo() {
+        this.esAmigo = true;
+    }
+
+
     @Override
     public String toString() {
         // TODO Auto-generated method stub
-        return "Jugador: "+ this.nombre + " de edad: "+ this.edad+ " tiene una puntuación de: "+this.puntuacion;
+        return "Jugador: "+ this.nombre + " de edad: "+ this.edad+ " tiene una puntuación de: "+this.puntuacion+ "\nTiene " + this.monedero 
+            +"euros en el monedero."+this.esAmigo;
     }
     public void mostrarJugador(){
         System.out.println(toString());
