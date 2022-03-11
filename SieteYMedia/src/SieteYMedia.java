@@ -20,6 +20,9 @@ public class SieteYMedia {
             // jugada(jugadores, coinToss(), baraja);
 
             mostrarJugadores(jugadores);
+
+            // Test Git
+            mostrarJugadores(jugadores);
             
             juego = false;
         }
@@ -55,7 +58,7 @@ public class SieteYMedia {
 
 
     // tests
-    
+
     // public static void jugada(Jugador[] jugadores, int coinToss, Baraja baraja) {
     //     Scanner sc = new Scanner(System.in);
     //     mostrarJugadores(jugadores);
