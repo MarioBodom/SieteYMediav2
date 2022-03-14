@@ -93,10 +93,6 @@ public class Baraja {
         }
     }
 
-    public void test(){
-        
-    }
-    
     public void ordenar(){
         for (int i = 1; i < cartas.length; i++) {
             int j = i-1;
