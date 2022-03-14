@@ -81,17 +81,17 @@ public class Baraja {
         return cartas;
     }
 
-    public void barajar() {
-        Random r = new Random();
-        for (int i = 0; i < cartas.length; i++) {
-            int j = r.nextInt(cartas.length);
-            if (j != i) {
-                Carta temp = cartas[i];
-                cartas[i] = cartas[j];
-                cartas[j] = temp;                
-            }
-        }
-    }
+    // public void barajar() {
+    //     Random r = new Random();
+    //     for (int i = 0; i < cartas.length; i++) {
+    //         int j = r.nextInt(cartas.length);
+    //         if (j != i) {
+    //             Carta temp = cartas[i];
+    //             cartas[i] = cartas[j];
+    //             cartas[j] = temp;                
+    //         }
+    //     }
+    // }
     
     public void ordenar(){
         for (int i = 1; i < cartas.length; i++) {
