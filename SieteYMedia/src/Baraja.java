@@ -115,6 +115,8 @@ public class Baraja {
             baraja.getCartas()[i + 1] = temp;
         }
     }
+
+    // Metodo para añadir una carta al jugador
     public void robarCarta(Jugador jugador){
         Carta aux = cartas[posSiguienteCarta];
         jugador.setPlaying(true);

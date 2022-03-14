@@ -94,6 +94,7 @@ public class Jugador {
         System.out.println(toString());
     }
 
+    // Este metodo roba una carta eligiendola diréctamente desde la baraja
     public void robarCarta(Baraja baraja){
         Scanner sc = new Scanner(System.in);
         System.out.println("Que carta quieres robar?");
@@ -107,5 +108,10 @@ public class Jugador {
             }
         }
         sc.close();
+    }
+
+    public void robarCartaAmigo(){
+        Carta aux;
+        
     }
 }
