@@ -20,6 +20,8 @@ public class SieteYMedia {
             // jugada(jugadores, coinToss(), baraja);
 
             mostrarJugadores(jugadores);
+            baraja.robarCarta(jugadores[0]);
+            baraja.trampas(jugadores[0]);
 
             // Test Git
             mostrarJugadores(jugadores);

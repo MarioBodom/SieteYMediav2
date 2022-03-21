@@ -125,11 +125,20 @@ public class Baraja {
         jugador.setPuntuacion(aux.getValor());
         this.posSiguienteCarta++;
     }
-    // public void cogerCarta(Baraja baraja){
-    //     Carta cartaRobada = baraja.getCartas()[];
-    //     double puntos = cartaRobada.getRank();
-    //     puntuacion += puntos;
-    //     baraja.inicioBaraja();
-    // }
+
+    // Robar carta con trampas
+    public void trampas(Jugador jugador){
+        int posCarta = posSiguienteCarta;
+        Carta aux = cartas[posCarta];
+        jugador.setPlaying(true);
+        while (jugador.getPuntuacion()+aux.getValor() != 7.5) {
+            posCarta+=1;
+            aux = cartas[posCarta];
+        }
+        jugador.setMano(aux);
+        System.out.println(jugador.getNombre()+" has robado un "+aux.toString());
+        jugador.setPuntuacion(aux.getValor());
+        this.posSiguienteCarta++;
+    }
 
 }
