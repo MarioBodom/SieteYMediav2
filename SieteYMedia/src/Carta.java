@@ -48,15 +48,28 @@ public class Carta {
             }
         }
 
+    
+    /** 
+     * @return String
+     * Nos da el nombre y el palo de la carta.
+     */
     @Override
     public String toString() {
         // TODO Auto-generated method stub
         return getNombre() + " de " + getSuitString();
     }
     
+    
+    /** 
+     * @return int
+     */
     public int getNumCarta() {
         return numCarta;
     }
+    
+    /** 
+     * @param numCarta
+     */
     public void setNumCarta(int numCarta) {
         this.numCarta = numCarta;
     }
