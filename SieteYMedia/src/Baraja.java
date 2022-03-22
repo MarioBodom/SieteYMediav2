@@ -108,6 +108,10 @@ public class Baraja {
         this.posSiguienteCarta++;
     }
 
+    
+    /** 
+     * @param baraja
+     */
     public void moverPrimeraCarta(Baraja baraja) {
         for (int i = 0; i < baraja.getCartas().length - 1; i++) {
             Carta temp = baraja.getCartas()[i];
@@ -116,6 +120,10 @@ public class Baraja {
         }
     }
 
+    
+    /** 
+     * @param jugador
+     */
     // Metodo para añadir una carta al jugador
     public void robarCarta(Jugador jugador){
         Carta aux = cartas[posSiguienteCarta];
@@ -126,6 +134,12 @@ public class Baraja {
         this.posSiguienteCarta++;
     }
 
+    
+    /** 
+     * @param jugador
+     * En este método podemos robar una carta asegurándonos de que el valor no va a ser mayor de 7.5 para poder ganar
+     * directamente.
+     */
     // Robar carta con trampas
     public void trampas(Jugador jugador){
         int posCarta = posSiguienteCarta;
